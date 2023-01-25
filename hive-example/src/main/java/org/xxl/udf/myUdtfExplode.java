@@ -15,7 +15,7 @@ public class myUdtfExplode extends GenericUDTF {
 
     // 输出数据的集合
     private ArrayList<String> outPutList = new ArrayList<>();
-    
+
     @Override
     public StructObjectInspector initialize(StructObjectInspector argOIs) throws UDFArgumentException {
 
@@ -31,7 +31,7 @@ public class myUdtfExplode extends GenericUDTF {
         // 新生成的列的列名
         fieldNames.add("word");
         // 新生成的列的类型
-        fieldOIs.add(PrimitiveObjectInspectorFactory.writableStringObjectInspector);
+        fieldOIs.add(PrimitiveObjectInspectorFactory.javaStringObjectInspector);
 
         return ObjectInspectorFactory.getStandardStructObjectInspector(fieldNames, fieldOIs);
     }

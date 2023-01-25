@@ -20,7 +20,7 @@ public class MyUdfLength extends GenericUDF {
 
         ObjectInspector outputOI = null;
         // 返回的类型
-        outputOI = PrimitiveObjectInspectorFactory.writableIntObjectInspector;
+        outputOI = PrimitiveObjectInspectorFactory.javaIntObjectInspector;
         return outputOI;
     }
 
